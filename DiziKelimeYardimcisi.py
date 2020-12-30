@@ -100,7 +100,6 @@ class wordhelper:
 
 
 
-updatepath()
 input("Paste the link. After doing so, press enter to start program. You will notice a google chrome tab open "
 "once the program starts. \n")
 
