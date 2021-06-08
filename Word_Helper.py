@@ -1,12 +1,15 @@
 
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+import docx
+from datetime import datetime
+from time import sleep
+
 
 
 class wordhelper:
     def __init__(self):
 
-
-        from selenium import webdriver
-        from selenium.webdriver.common.action_chains import ActionChains
 
         self.browser = webdriver.Chrome(r"chromedriver.exe")
         #self.browser.minimize_window()
@@ -28,7 +31,6 @@ class wordhelper:
     def getwords(self, url):
 
         self.browser.get(url)
-        from time import sleep
         leftside=self.urltolistword(url)
         print("left side is:")
         print(leftside)
@@ -69,8 +71,7 @@ class wordhelper:
         return needed
 
     def writetoworddocument(self, path, dictio):
-        import docx
-        from datetime import datetime
+        
 
 
         mydoc = docx.Document(path)
